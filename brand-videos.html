@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Promotion Videos - PB Creation Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+        }
+        .glass-effect {
+            background: rgba(100, 225, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 225, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .nav-link {
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #00e5ff;
+            font-weight: 600;
+            transform: translateY(-2px);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav id="navbar" class="container mx-auto px-6 py-4 flex justify-between items-center glass-effect mt-4">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="image_19f13f.jpg" alt="PB Creation Logo" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="ai-videos.html" class="nav-link text-white font-medium">AI Videos</a>
+                <a href="brand-videos.html" class="nav-link text-white font-medium active">Brand Promotions</a>
+                <a href="pamphlets.html" class="nav-link text-white font-medium">Pamphlets</a>
+                <a href="index.html#contact" class="nav-link text-white font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect mx-6 rounded-b-lg">
+            <a href="ai-videos.html" class="block py-2 px-4 text-sm text-white hover:bg-white/10">AI Videos</a>
+            <a href="brand-videos.html" class="block py-2 px-4 text-sm text-white hover:bg-white/10">Brand Promotions</a>
+            <a href="pamphlets.html" class="block py-2 px-4 text-sm text-white hover:bg-white/10">Pamphlets</a>
+            <a href="index.html#contact" class="block py-2 px-4 text-sm text-white hover:bg-white/10">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 pt-32">
+        <!-- Brand Promotion Videos Section -->
+        <section id="brand-videos-gallery" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">Brand Promotion Videos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Brand Video 1 -->
+                <div class="glass-effect p-4 transform hover:scale-105 transition-transform duration-300">
+                    <div class="video-container bg-black/50">
+                        <video controls> <source src="indusshoesanim.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4 text-white">Indus Shoes Animation</h3>
+                </div>
+                <!-- Brand Video 2 -->
+                <div class="glass-effect p-4 transform hover:scale-105 transition-transform duration-300">
+                    <div class="video-container bg-black/50">
+                        <video controls> <source src="industruck.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4 text-white">Indus Truck Animation</h3>
+                </div>
+                <!-- Brand Video 3 -->
+                <div class="glass-effect p-4 transform hover:scale-105 transition-transform duration-300">
+                    <div class="video-container bg-black/50">
+                        <video controls> <source src="industoyaiad.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4 text-white">Indus Toy AI Ad</h3>
+                </div>
+                 <!-- You can add more video blocks here for this page -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 pb-8">
+        <div class="container mx-auto px-6 text-center text-white">
+            <p>&copy; 2024 PB Creation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
